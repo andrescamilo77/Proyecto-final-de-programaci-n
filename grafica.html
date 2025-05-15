@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ganancias Tienda de Ropa</title>
+  <link rel="stylesheet" href="/graficas.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+  <h1>Ganancias de Productos por Mes (2024)</h1>
+
+  <div id="controls">
+  <label for="energyType">Selecciona un mes:</label>
+  <select id="energyType">
+    <option value="septiembre">Septiembre</option>
+    <option value="octubre">Octubre</option>
+    <option value="noviembre">Noviembre</option>
+    <option value="diciembre">Diciembre</option>
+  </select>
+
+  <label for="chartType">Tipo de gráfica:</label>
+  <select id="chartType">
+    <option value="line">Línea</option>
+    <option value="bar">Columnas</option>
+    <option value="pie">Pastel</option>
+  </select>
+
+  <br/>
+
+  <button onclick="mostrarGrafica()">Graficar</button>
+  <button onclick="mostrarTabla()">Mostrar Todos los Datos</button>
+</div>
+
+    </select>
+
+  <div id="chart-container">
+    <canvas id="energyChart"></canvas>
+  </div>
+
+  <div id="data-table">
+    <table id="tablaDatos">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Septiembre</th>
+          <th>Octubre</th>
+          <th>Noviembre</th>
+          <th>Diciembre</th>
+        </tr>
+      </thead>
+      <tbody id="tablaCuerpo"></tbody>
+    </table>
+  </div>
+
+  <script src="/grafica.js"></script>
+</body>
+</html>
